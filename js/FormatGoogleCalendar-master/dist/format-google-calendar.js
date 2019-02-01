@@ -295,13 +295,13 @@ window.formatGoogleCalendar = function () {
 
     //Get month name according to index
     var getMonthName = function getMonthName(month) {
-        var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var monthNames = ['Januar', 'Februar', 'Maerz', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
 
         return monthNames[month];
     };
 
     var getDayName = function getDayName(day) {
-        var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var dayNames = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
 
         return dayNames[day];
     };
@@ -354,7 +354,7 @@ window.formatGoogleCalendar = function () {
         }
 
         //month day, year time-time
-        return dayNameStart + getMonthName(dateStart[1]) + ' ' + dateStart[0] + ', ' + dateStart[2] + formattedTime;
+        return dayNameStart + ' der  ' + dateStart[0] + '. ' + getMonthName(dateStart[1]) + ', ' + formattedTime;
     };
 
     var formatDateOneDay = function formatDateOneDay(dateStart, dayNames) {
@@ -457,10 +457,6 @@ window.formatGoogleCalendar = function () {
         // Handle afternoon.
         if (hour >= 12) {
             period = 'PM';
-
-            if (hour >= 13) {
-                hour -= 12;
-            }
         }
 
         // Handle midnight.
@@ -472,7 +468,7 @@ window.formatGoogleCalendar = function () {
         minute = (minute < 10 ? '0' : '') + minute;
 
         // Format time.
-        formattedTime = hour + ':' + minute + period;
+        formattedTime = hour + ':' + minute;
         return formattedTime;
     };
 
