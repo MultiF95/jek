@@ -14,6 +14,24 @@
   
   </head>
   <body>
+      
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="../js/FormatGoogleCalendar-master/dist/format-google-calendar.js"></script>
+        <script>
+          formatGoogleCalendar.init({
+            calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/jugendtreffjek@gmail.com/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY',
+            past: false,
+            upcoming: true,
+            pastTopN: 20,
+            upcomingTopN: 6,
+            itemsTagName: 'li',
+            upcomingSelector: '#events-upcoming',
+            pastSelector: '#events-past',
+            upcomingHeading: '<h2 class="teal-text text-lighten-2">Anstehende Treffen</h2>',
+            pastHeading: '',
+            format: ['<strong>', '*date*']
+          }); 
+        </script>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" href="../" class="brand-logo"><b>JEK</b></a>
@@ -57,9 +75,18 @@
       <!-- Icon Section -->
       <div class="row">
         <div class="col s12 m4">
+	<div>
           <div class="icon-block">
-		  <!-- Google Kalender Widget -->   
-<p class="left-align light"><iframe src="https://calendar.google.com/calendar/embed?src=jugendtreffjek%40gmail.com&ctz=Europe%2FBerlin" style="border: 0" width="350" height="450" frameborder="0" scrolling="no"></iframe>    </div>
+				  <!-- Google Kalender Widget -->   
+          			  <p class="left-align light">
+  			            <!--<iframe src="https://calendar.google.com/calendar/embed?src=jugendtreffjek%40gmail.com&ctz=Europe%2FBerlin" style="border: 0" width="350" height="450" frameborder="0" scrolling="no"></iframe>-->    </div>
+            
+              <ul id="events-upcoming">
+                </ul></p>
+              <ul id="events-past">
+                </ul>
+
+
         </div>
         </div>
         </div>
@@ -71,8 +98,8 @@
       <!-- Icon Section -->
       <div class="row">
         <div class="col s12 m4">
-          <div class="icon-block">
-            Im Jek wird dir folgendes geboten: <a href="../attractions.html">Attraktionen</a>.
+          <div class="">
+        Im Jek wird dir folgendes geboten: <a href="../attractions.html">Attraktionen</a>.
         </div>
         </div>
         </div>
@@ -140,4 +167,22 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="../js/materialize.js"></script>
   <script src="../js/init.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="../js/FormatGoogleCalendar-master/dist/format-google-calendar.js">            
+    formatGoogleCalendar.init({
+      calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/jugendtreffjek@gmail.com/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY',
+      past: true,
+        upcoming: true,
+        pastTopN: 20,
+        upcomingTopN: 3,
+        itemsTagName: 'li',
+        upcomingSelector: '#events-upcoming',
+        pastSelector: '#events-past',
+        upcomingHeading: '<h2>Upcoming events</h2>',
+        pastHeading: '<h2>Past events</h2>',
+        format: ['<strong>', '*date*', '</strong>: ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*']
+
+    });
+  </script>
+
   </body> </html>

@@ -3661,7 +3661,7 @@ input[type=range] + .thumb {
     right: auto;
   }
   .row .col.m4 {
-    width: 33.3333333333%;
+    /*width: 33.3333333333%;*/
     margin-left: auto;
     left: auto;
     right: auto;
