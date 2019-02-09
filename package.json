@@ -1,0 +1,23 @@
+{
+  "name": "jek",
+  "version": "1.0.0",
+  "description": "None yet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FaserF/jek.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FaserF/jek/issues"
+  },
+  "homepage": "https://github.com/FaserF/jek#readme",
+  "dependencies": {
+    "prettier": "^1.16.4"
+  }
+}
